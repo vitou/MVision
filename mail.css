@@ -1,0 +1,891 @@
+#messagetoolbar
+{
+  position: absolute;
+  top: 29px;
+  left: 102px;
+  right: 250px;
+  height: 35px;
+  white-space: nowrap;
+}
+
+#messagetoolbar2
+{
+  position: absolute;
+  top: 42px;
+  left: 201px;
+  right: 250px;
+  height: 35px;
+  white-space: nowrap;
+}
+
+#messagetoolbar a
+{
+  padding-right: 0px;
+}
+
+#messagetoolbar select
+{
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #333333;
+}
+
+#messagetoolbar select.mboxlist
+{
+  position: absolute;
+  left: 740px;
+  top: 18px;
+}
+
+#messagetoolbar select.mboxlist option
+{
+  padding-left: 15px;
+}
+
+#messagetoolbar select.mboxlist option[value="0"]
+{
+  padding-left: 2px;
+}
+
+#listcontrols
+{
+  position: absolute;
+  left: 181px;
+  bottom: 0px;
+  height: 40px;
+  width: 500px;
+  font-size: 11px;
+  background-image: url('images/listcontrols-bottom.jpg');
+  background-repeat: no-repeat;
+}
+
+
+
+#listcontrols-lable
+{
+ padding-left: 40px;
+ padding-top: 13px;
+}
+
+
+
+#listcontrols a,
+#listcontrols a:active,
+#listcontrols a:visited,
+#mailboxcontrols a,
+#mailboxcontrols a:active,
+#mailboxcontrols a:visited
+{
+  color: #5A7A9A;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+#listcontrols a.active,
+#listcontrols a.active:active,
+#listcontrols a.active:visited,
+#mailboxcontrols a.active,
+#mailboxcontrols a.active:active,
+#mailboxcontrols a.active:visited
+{
+  color: #CC0000;
+}
+
+#listcontrols a.active:hover,
+#mailboxcontrols a.active:hover
+{
+  text-decoration: underline;
+}
+
+#messagecountbar
+{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 300px;
+  height: 40px;
+  text-align: right;
+  white-space: nowrap;
+  background-image: url('images/messagecoutbar-bottom.jpg');
+  background-repeat: no-repeat;
+}
+
+
+
+
+#messagecountbar-lable
+{
+ padding-right: 40px;
+ padding-top: 13px;
+}
+
+#messagecountbar-lable2
+{
+ padding-right: 57px;
+ padding-top: 13px;
+}
+
+
+
+#bottom-bar
+{
+  position: absolute;
+  bottom: 0px;
+  height: 40px;
+  width: 100%;
+  white-space: nowrap;
+  background-image: url('images/bg-bottom.jpg');
+  background-repeat: repeat-x;
+}
+
+
+
+
+
+#messagecountbar span
+{
+  font-size: 11px;
+  color: #333333;
+}
+
+#messagepartcontainer
+{
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+#messagecontframe
+{
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+
+#mailviewsplitter
+{
+  border: 0px solid #ff0000;
+  padding-top: 0px;
+}
+
+/*\*/
+html>body*#messagecontframe
+{
+  [height: 40%;
+  height: 40%;
+  ]height: 100%;
+}
+/**/
+
+#messagepartframe
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  border: 1px solid #999999;
+  background-color: #F9F9F9;
+}
+
+
+#partheader
+{
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  height: 40px;
+}
+
+#partheader table td
+{
+  padding-left: 2px;
+  padding-right: 4px;
+  vertical-align: middle;
+  font-size: 11px;
+}
+
+#partheader table td.title
+{
+  color: #666666;
+  font-weight: bold;
+}
+
+
+#quicksearch
+{
+ text-align: right;
+ padding-right: 215px;
+ padding-top: 15px;
+ font-size: 11px;
+ color: #3D6185;
+ /* font-weight: bold; */
+}
+
+
+/** mailbox list styles */
+
+#mailboxlist-header
+{
+  position: absolute;
+  top: 85px;
+  left: 0px;
+  width: 145px !important;
+/*  width: 162px; */
+  height: 17px;
+  padding: 5px 22px 2px 13px;
+  background-color: #EBEBEB;
+  background-image: url('images/listheader_aqua-0.png'); 
+  border-right: 1px solid #bcccda;
+  color: #2F4A66;
+  font-size: 11px;
+  font-weight: bold;  
+}
+
+
+
+
+#mailboxlist-header-2
+{
+  padding: 3px 10px 2px 10px;
+  background-image: url('images/listheader_aqua.gif'); 
+  border: 1px solid #CCCCCC;
+  color: #333333;
+  font-size: 11px;
+  font-weight: bold;  
+}
+
+
+#mailboxlist-container
+{
+  position: absolute;
+  top: 109px;
+  left: 0px;
+  width: 180px;
+  bottom: 40px;
+  border-top: 0px;
+  border-right: 1px solid #bcccda;
+  border-bottom: 1px solid #bcccda;
+  /* border: 1px solid #CCCCCC; */
+  background-color: #ffffff;
+  overflow: auto;
+  /* css hack for IE */
+  height: expression((parseInt(document.documentElement.clientHeight)-145)+'px');
+}
+
+#mailboxlist
+{
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  list-style-image: none;
+  list-style-type: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#mailboxlist li
+{
+ /* height: 18px; */
+  font-size: 11px;
+  background: url('images/icons/folder-closed.png') no-repeat;
+  background-position: 10px 1px;
+  border-bottom: 1px solid #D7E2EC;
+/* IE 5.5  margin-left: -16px; */
+}
+
+#mailboxlist li.inbox
+{
+  background-image: url('images/icons/folder-inbox.png');
+}
+
+#mailboxlist li.drafts
+{
+  background-image: url('images/icons/folder-drafts.png');
+}
+
+#mailboxlist li.sent
+{
+  background-image: url('images/icons/folder-sent.png');
+}
+
+#mailboxlist li.junk
+{
+  background-image: url('images/icons/folder-junk.png');
+}
+
+#mailboxlist li.trash
+{
+  background-image: url('images/icons/folder-trash.png');
+}
+
+#mailboxlist li a
+{
+  display: block;
+  padding: 5px 0 5px 34px;
+  text-decoration: none;
+}
+
+#mailboxlist li, #mailboxlist li.unread
+{  
+ /* background-image: url('images/mailbox_list.gif'); */
+}
+
+#mailboxlist li.unread
+{
+  font-weight: bold;
+}
+
+#mailboxlist li.selected
+{
+  background-color: #8AAACA;
+  border-bottom: 1px solid #8AAACA;
+}
+
+#mailboxlist li.selected a
+{
+  color: #FFF;
+  font-weight: bold;
+}
+
+#mailboxlist li.droptarget
+{
+  background-color: #FFFFA6;
+}
+
+/* styles for nested folders */
+#mailboxlist ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  border-top: 1px solid #EBEBEB;  
+}
+
+#mailboxlist ul li {
+  padding-left: 15px;
+  background-position:27px 4px;
+}
+
+#mailboxlist li.selected li {
+  background-color: #F9F9F9;
+}
+
+#mailboxlist li.unread li {
+  font-weight: normal;
+}
+
+#mailboxlist li.unread li.unread {
+  font-weight: bold;
+}
+
+#mailboxlist li.selected li a{
+  color: black;
+  font-weight: normal;
+}
+
+
+#mailboxcontrols
+{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 181px;
+  height: 40px;
+  overflow: hidden;
+  font-size: 11px;
+  background-image: url('images/bottom-controls1.jpg');
+  background-repeat: no-repeat;
+}
+
+
+
+
+#mailboxcontrols-lable
+{
+ padding-left: 15px;
+ padding-top: 13px;
+}
+
+
+#bottom-bar{border-top:1px solid #BCCCDA;margin-top:5px;z-index:100;}
+#messagecountbar,#mailboxcontrols,#listcontrols{z-index:200;}
+
+
+/** message list styles */
+
+
+#quotadisplay
+{
+  color: #666666;
+  font-size: 11px;
+}
+
+#quotadisplay img
+{
+  vertical-align: middle;
+  margin-left: 4px;
+  border: 1px solid #666666;
+}
+#messagelist thead tr td a
+{
+  display: block;
+  width: auto !important;
+  width: 100%;
+  color: #2F4A66;
+  text-decoration: none;
+}
+
+/** message view styles */
+table.headers-table td.header-title {height:20px;line-height:20px;}
+table.headers-table img{position:relative;top:1px;left:2px;}
+#mailboxlist li {margin-bottom:-1px;}
+#messageframe
+{
+  position: absolute;
+  top: 85px;
+  left: 180px;
+  right: 0px;
+  bottom: 40px;
+  border: 1px solid #BCCCDA;
+  background-color: #FFFFFF;
+  overflow: auto;
+  /* css hack for IE */
+  /* margin-bottom: 10px; */
+  width: expression((parseInt(document.documentElement.clientWidth)-240)+'px');
+  height: expression((parseInt(document.documentElement.clientHeight)-125)+'px');
+}
+
+div.messageheaderbox
+{
+  margin: 0px 0px 0px 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #BCCCDA;
+}
+
+table.headers-table
+{
+  width: 100%;
+  background-color: #D7E1EC;
+  table-layout: fixed;
+}
+
+#messagebody table.headers-table
+{
+  width: auto;
+  margin: 6px 8px;
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+}
+
+table.headers-table tr td
+{
+  font-size: 11px;
+  border-bottom:1px solid #FFFFFF;
+}
+
+table.headers-table td.header-title
+{
+  width: 80px;
+  color: #2F4A66;
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 4px;
+}
+
+table.headers-table tr td.subject
+{
+  width: 95%;
+  font-weight: bold;
+}
+
+#attachment-list
+{
+  margin: 0px;
+  padding: 0px 0px 0px 68px;
+  min-height: 18px;
+  list-style-image: none;
+  list-style-type: none;
+  background: url('images/icons/attachment.png') 52px 1px no-repeat #D7E1EC;
+  /* css hack for IE */
+  height: expression(Math.min(18, parseInt(this.clientHeight))+'px');
+}
+
+#attachment-list:after
+{
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#attachment-list li
+{
+  float: left;
+  height: 18px;
+  font-size: 11px;
+  padding: 2px 10px 0px 10px;
+}
+
+#attachment-list li a
+{
+  text-decoration: none;
+}
+
+#attachment-list li a:hover
+{
+  text-decoration: underline;
+}
+
+#messagebody
+{
+  position:relative;
+  height: 100%;
+  padding: 8px 9px;
+  background-color: #FFFFFF;
+}
+
+div.message-part
+{
+  padding: 8px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+div.message-part a
+{
+  color: #0000CC;
+}
+
+div.message-part div.pre
+{
+  margin: 0px;
+  padding: 0px;
+  white-space: pre;
+  font-family: Tahoma;
+}
+
+div.message-part blockquote
+{
+  color: blue;
+  border-left: 2px solid blue;
+  border-right: 2px solid blue;
+  background-color: #f6f6f6;
+  margin: 2px 0px 2px 0px;
+  padding: 1px 8px 1px 10px;
+}
+
+div.message-part blockquote blockquote
+{
+  color: green;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
+}
+
+div.message-part blockquote blockquote blockquote
+{
+  color: #990000;
+  border-left: 2px solid #bb0000;
+  border-right: 2px solid #bb0000;
+}
+
+#remote-objects-message
+{
+  display: none;
+  height: 20px;
+  min-height: 20px;
+  margin: 8px 8px 0px 8px;
+  padding: 10px 10px 6px 46px;
+}
+
+#remote-objects-message a
+{
+  color: #666666;
+  padding-left: 10px;
+}
+
+#remote-objects-message a:hover
+{
+  color: #333333;
+}
+
+
+/** message compose styles */
+
+#priority-selector
+{
+  position: absolute;
+  left: 280px;
+  top: 2px;
+}
+
+#receipt-selector
+{
+  position: absolute;
+  left: 1px;
+  top: 50px;
+  z-index: 10;
+}
+table#compose-headers{padding-bottom:3px;}
+#compose-container
+{
+  position: absolute;
+  /* top: 90px; */
+  top: 127px;
+  left: 200px;
+  right: 40px;
+  bottom: 40px;
+  padding: 0px;
+  margin: 0px;
+  /* css hack for IE */
+  width: expression(document.documentElement.clientWidth-240);
+  height: expression((parseInt(document.documentElement.clientHeight)-130)+'px');
+}
+
+/*
+#compose-headers
+{
+  position: absolute;
+  top: 70px;
+  left: 200px;
+  height: 84px;
+  border-top: 1px solid #cccccc;
+  overflow: auto;
+}
+
+#compose-headers td
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+*/
+
+#compose-headers
+{
+  width: 100%;
+}
+
+/*
+#compose-headers td
+{
+  width: 100%;
+}
+*/
+
+#compose-headers td.top
+{
+  vertical-align: top;
+}
+
+#compose-headers td.title,
+#compose-subject td.title
+{
+  width: 80px !important;
+  color: #2F4A66;
+  font-size: 11px;
+  font-weight: bold;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+#compose-headers td.add-button
+{
+  width: 40px !important;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+#compose-headers td.add-button a
+{
+  color: #000000;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+#compose-headers td textarea
+{
+  width: 100%;
+  height: 40px;
+}
+
+#compose-headers td input
+{
+  width: 100%;
+}
+
+#compose-cc,
+#compose-bcc,
+#compose-replyto
+{
+  display: none;
+}
+
+#compose-body
+{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 99%;
+  height: 60%;
+  min-height: 260px;
+  font-size: 11px;
+  font-family: Tahoma;
+}
+
+#compose-list
+{
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  width: 160px;
+}
+
+
+#compose-attachments
+{
+  position: absolute;
+  top: 42px;
+  left: 20px;
+  width: 160px;
+}
+
+#compose-attachments ul
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px solid #86A5C1;
+  list-style-image: none;
+  list-style-type: none;
+}
+
+#compose-attachments ul li
+{
+  height: 18px;
+  font-size: 11px;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding-right: 4px;
+  border: 1px solid #9EB7CD;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 1px;
+  background-color: #D7E1EC;
+}
+
+#attachment-title
+{
+  background: url('images/icons/attachment.png') top left no-repeat;
+  padding: 0px 0px 3px 22px;
+}
+
+#attachment-form
+{
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  z-index: 200;
+  padding: 8px;
+  visibility: hidden;
+  border: 1px solid #A4BCD5;
+  background-color: #ffffff;
+}
+
+#attachment-form input.button
+{
+  margin-top: 8px;
+}
+
+#attach
+{
+  background: url('images/attach.png');
+  background-repeat: no-repeat;
+  height: 42px;
+  width: 168px;
+}
+
+#bg-text
+{
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+#lable-from
+{
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-right: 43px;
+}
+
+#lable-to
+{
+  padding-left: 5px;
+  padding-bottom: 34px;
+  padding-top: 4px;
+  padding-right: 30px;
+}
+
+#lable-cc
+{
+  padding-left: 5px;
+  padding-bottom: 34px;
+  padding-top: 4px;
+  padding-right: 55px;
+}
+
+#lable-bcc
+{
+
+  padding-left: 5px;
+  padding-bottom: 34px;
+  padding-top: 4px;
+  padding-right: 64px;
+}
+
+#lable-subject
+{
+  padding-left: 5px;
+  padding-bottom: 3px;
+  padding-top: 4px;
+  padding-right: 40px;
+}
+
+#send-cancel
+{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+#answ
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  margin:1px;
+  background-color: #D7E1EC;
+}
+
+#answ-lable
+{
+  border: 1px solid #BCCCDA;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 27px;
+  background-color: #D7E1EC;
+  z-index: -1;
+}

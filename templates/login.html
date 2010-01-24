@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+
+
+
+<link rel="stylesheet" type="text/css" href="/login.css" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=7;FF=3;OtherUA=4;" />
+
+
+<roundcube:include file="/includes/links.html" />
+
+
+</head>
+
+<body>
+<div id="youds" style="position:absolute;width:50px;overflow:hidden;height:10px;right:5px;bottom:5px;font-size:8px;text-align:right;"></div>
+<img src="/images/logo.png" width="165" height="55" border="0" alt="<roundcube:object name='productname' />" hspace="10" />
+
+
+
+<roundcube:object name="message" id="message" />
+
+
+
+<div id="login-form">
+
+
+<div class="boxtitle"><div class="welcome-text"><roundcube:label name="welcome" /></div></div>
+
+
+<div class="boxcontent">
+
+
+
+
+
+<form name="form" action="./" method="post">
+
+<div id="log-in">
+
+<roundcube:object name="loginform" form="form" id="log" />
+
+</div>
+
+
+
+<p style="text-align:center;"><input type="submit" class="login-button" value="<roundcube:label name='login' />" /></p>
+
+
+
+
+
+
+
+</form>
+
+</div>
+
+</div>
+
+
+
+</body>
+
+</html>
+
+

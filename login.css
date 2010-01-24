@@ -1,0 +1,32 @@
+/***** RoundCube|Mail login styles *****/
+
+#login-form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 160px;
+  width: 382px;
+  background: url('images/login-bg.png');
+  background-repeat: no-repeat;
+}
+
+#login-form table td.title
+{
+  color: #29425A;
+  text-align: right;
+  padding-right: 10px;
+}
+
+
+.boxcontent {
+  padding: 10px 20px 10px 20px;
+}
+
+#log-in
+{
+  margin-left: 50px;
+}
+
+form { margin: 0px; }
+p { margin-top:11px; }
+input.login-button { margin: -10px; padding-top:2px; }
+#log-in table td { padding:0px; height:25px; }

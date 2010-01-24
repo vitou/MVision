@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+#mailcontframe
+{
+  position: absolute;
+  top: 85px;
+  left: 181px;
+  right: 0px;
+  bottom: 40px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #bcccda;
+  background-color: #ffffff;
+  overflow: auto;
+  /* css hack for IE */
+  width: expression((parseInt(document.documentElement.clientWidth)-230)+'px');
+  height: expression((parseInt(document.documentElement.clientHeight)-125)+'px');
+}
+
+#mailpreviewframe
+{
+  position: absolute;
+  top: 305px;
+  left: 180px;
+  right: 0px;
+  bottom: 40px;
+  border: 1px solid #BCCCDA;
+  background-color: #ffffff;
+  /* css hack for IE */
+  width: expression((parseInt(document.documentElement.clientWidth)-230)+'px');
+  height: expression((parseInt(document.documentElement.clientHeight)-135-document.getElementById('mailcontframe').offsetHeight)+'px');
+}

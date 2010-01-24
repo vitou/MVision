@@ -1,0 +1,214 @@
+/***** RoundCube|Mail address book task styles *****/
+#abooktoolbar
+{
+  position: absolute;
+  top: 38px;
+  left: 15px;
+  height: 35px;
+}
+
+#abooktoolbar a
+{
+  padding-right: 0px;
+}
+
+#abookcountbar
+{
+  position: absolute;
+  bottom: 0px;
+  left: 185px;
+  width: 300px;
+  height: 40px;
+  text-align: left;
+  background-image: url('images/messagecoutbar-bottom.jpg');
+  background-repeat: no-repeat;
+}
+
+#abookcountbar-lable
+{
+ padding-left: 75px;
+ padding-top: 13px;
+}
+
+
+
+#bottom-bar
+{
+  position: absolute;
+  bottom: 0px;
+  height: 40px;
+  width: 100%;
+  white-space: nowrap;
+  background-image: url('images/bg-bottom.jpg');
+  background-repeat: repeat-x;
+}
+
+
+
+#abookcountbar span
+{
+  font-size: 11px;
+  color: #333333;
+}
+
+#directorylist, #addresslist
+{
+  position: absolute;
+  top: 85px;
+  bottom: 40px;
+  border: 1px solid #BCCCDA;
+  border-top: 0px;
+  background-color: #ffffff;
+  overflow: auto;
+  /* css hack for IE */
+  height: expression((parseInt(document.documentElement.clientHeight)-135)+'px');  
+}
+
+#directorylist
+{
+  left: 0px;
+  width: 150px;
+}
+
+#addresslist
+{
+  left: 185px;
+  width: 340px;
+}
+
+#directorylist ul
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#directorylist ul li
+{
+  font-size: 11px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+#directorylist ul li a
+{
+  display: block;
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+#directorylist li.selected
+{
+  background-color: #929292;
+  border-bottom: 1px solid #898989;
+}
+
+#directorylist li.selected a
+{
+  color: #FFF;
+  font-weight: bold;
+}
+
+#directorylist li.droptarget
+{
+  background-color: #FFFFA6;
+}
+
+
+#contacts-table
+{
+  width: 100%;
+  table-layout: fixed;
+  /* css hack for IE */
+  width: expression(document.getElementById('addresslist').clientWidth);
+}
+
+
+#contacts-table tbody td
+{
+  cursor: pointer;
+}
+
+
+#contacts-box
+{
+  position: absolute;
+  top: 85px;
+  left: 540px;
+  right: 0px;
+  bottom: 40px;
+  border: 1px solid #BCCCDA;
+  overflow: hidden;
+  /* css hack for IE */
+  width: expression((parseInt(document.documentElement.clientWidth)-45-document.getElementById('addresslist').offsetLeft-document.getElementById('addresslist').offsetWidth)+'px');
+  height: expression((parseInt(document.documentElement.clientHeight)-135)+'px');
+}
+
+
+#addressviewsplitter
+{
+  background-position: 4px center;
+}
+
+#addressviewsplitter .splitterLine
+{
+  margin-left: 3px;
+  width: 6px;
+}
+
+
+body.iframe,
+#contact-frame
+{
+  background-color: #ffffff;
+}
+
+#contact-frame
+{
+  border: none;
+/* visibility: hidden; */
+}
+
+#contact-title, #groups-title
+{
+  height: 16px !important;
+  height: 24px;
+  padding: 4px 5px 3px 5px;
+  border-bottom: 0px;
+  color: #2F4A66;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #EBEBEB;
+  background-image: url('images/listheader_aqua-1.png');
+  white-space: nowrap;
+}
+
+#contact-title
+{
+  padding: 4px 10px 3px 10px;
+}
+
+#contact-details
+{
+  padding: 15px 10px 10px 10px;
+}
+
+#contact-details table td.title
+{
+  color: #2F4A66;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#quicksearch
+{
+ text-align: right;
+ padding-right: 215px;
+ padding-top: 15px;
+ font-size: 11px;
+ color: #3D6185;
+ /* font-weight: bold; */
+}
+

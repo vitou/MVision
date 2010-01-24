@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+img { behavior: url(skins/mvision2_en/iepngfix.htc) }
+#messagelist tr td.icon img{position:relative;top:3px;}
+#mailviewsplitter{padding:2px;padding-bottom:3px;}
+#bottom-bar{border-top:1px solid #BCCCDA;margin-top:5px;z-index:100;}
+#messagecountbar,#mailboxcontrols,#listcontrols{z-index:200;}
+table.headers-table img{display:inline;margin-top:4px;margin-left:2px;clear:both;vertical-align:middle;}
+#messagelist thead tr{height:24px;padding:5px 22px 2px 13px;}

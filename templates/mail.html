@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+<roundcube:include file="/includes/links.html" />
+<link rel="stylesheet" type="text/css" href="/mail.css" />
+<script type="text/javascript" src="/splitter.js"></script>
+</head>
+<body>
+<div id="loadingLayout"></div>
+<roundcube:include file="/includes/taskbar.html"/>
+<roundcube:include file="/includes/header.html" />
+
+<div id="messagetoolbar"><roundcube:button command="checkmail" imageSel="/images/buttons/inbox_sel.png" imageAct="/images/buttons/inbox_act.png" imagePas="/images/buttons/inbox_pas.png" width="95" height="44" title="checkmail" /><roundcube:button command="compose" imageSel="/images/buttons/compose_sel.png" imageAct="/images/buttons/compose_act.png" imagePas="/images/buttons/compose_pas.png"  width="88" height="44" title="writenewmessage" /><roundcube:button command="reply" imageSel="/images/buttons/reply_sel.png" imageAct="/images/buttons/reply_act.png" imagePas="/images/buttons/reply_pas.png"   width="83" height="44" title="replytomessage" /><roundcube:button command="reply-all" imageSel="/images/buttons/replyall_sel.png" imageAct="/images/buttons/replyall_act.png" imagePas="/images/buttons/replyall_pas.png"  width="82" height="44" title="replytoallmessage" /><roundcube:button command="forward" imageSel="/images/buttons/forward_sel.png" imageAct="/images/buttons/forward_act.png" imagePas="/images/buttons/forward_pas.png"  width="88" height="44" title="forwardmessage" /><roundcube:button command="delete" imageSel="/images/buttons/delete_sel.png" imageAct="/images/buttons/delete_act.png" imagePas="/images/buttons/delete_pas.png"  width="82" height="44" title="deletemessage" /><roundcube:button command="print" imageSel="/images/buttons/print_sel.png" imageAct="/images/buttons/print_act.png" imagePas="/images/buttons/print_pas.png"   width="105" height="44" title="printmessage" /></div>
+
+<div id="quicksearch"><roundcube:label name="quicksearch" />:</div>
+<div id="quicksearchbar">
+
+<roundcube:object name="searchform" type="search" results="5" id="quicksearchbox" /><roundcube:button command="reset-search" id="searchreset" image="/images/icons/reset.png" title="resetsearch" />
+</div>
+
+
+
+
+
+<div id="bottom-bar">&nbsp;</div>
+<div id="messagecountbar">
+<div id="messagecountbar-lable">
+<roundcube:button command="firstpage" imageSel="/images/buttons/first_sel.png" imageAct="/images/buttons/first_act.png" imagePas="/images/buttons/first_pas.png" width="11" height="11" title="firstmessages" />
+<roundcube:button command="previouspage" imageSel="/images/buttons/previous_sel.png" imageAct="/images/buttons/previous_act.png" imagePas="/images/buttons/previous_pas.png" width="11" height="11" title="previousmessages" />
+&nbsp;<roundcube:object name="messageCountDisplay" />&nbsp;
+<roundcube:button command="nextpage" imageSel="/images/buttons/next_sel.png" imageAct="/images/buttons/next_act.png" imagePas="/images/buttons/next_pas.png" width="11" height="11" title="nextmessages" />
+<roundcube:button command="lastpage" imageSel="/images/buttons/last_sel.png" imageAct="/images/buttons/last_act.png" imagePas="/images/buttons/last_pas.png" width="11" height="11" title="lastmessages" />
+</div>
+</div>
+
+<div id="mailboxlist-header"><roundcube:label name="mailboxlist" /></div>
+<div id="mailboxlist-container"><roundcube:object name="mailboxlist" id="mailboxlist" maxlength="16" /></div>
+
+
+<div id="mailboxcontrols">
+<div id="mailboxcontrols-lable">
+<roundcube:label name="folder" />:&nbsp;
+<roundcube:button command="expunge" label="compact" classAct="active" />&nbsp;
+<roundcube:button command="purge" label="empty" classAct="active" />&nbsp;
+</div>
+</div>
+
+
+
+<div id="mailcontframe">
+<roundcube:object name="messages"
+  id="messagelist"
+  cellspacing="1"
+  summary="Message list"
+  messageIcon="/images/icons/dot.png"
+  unreadIcon="/images/icons/unread.png"
+  deletedIcon="/images/icons/deleted.png"
+  repliedIcon="/images/icons/replied.png"
+  attachmentIcon="/images/icons/attachment.png" />
+</div>
+
+
+
+<script type="text/javascript">
+<!--//
+function createCookie(name,value,days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  }
+  else expires = "";
+  document.cookie = name+"="+value+expires+"; path=/";
+} 
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';'); 
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i]; 
+    while (c.charAt(0)==' ') c = c.substring(1,c.length); 
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="skins/mvision2_en/paneswitch.js"></script>
+<roundcube:if condition="config:preview_pane_horizontal == true" />
+<script type="text/javascript">
+<!--//
+configSet=true;
+window.onload = function () {
+	var cookie = readCookie("layout");
+	if (cookie && cookie == 'vertical') { 
+		document.styleSheets[1].disabled = false;
+		switchLayout();
+		document.getElementById('loadingLayout').style.display = 'none'
+	} else if (cookie && cookie == 'horizontal') {
+		document.styleSheets[1].disabled = true;
+		switchLayout();
+		setTimeout("switchLayout();switchLayout();document.getElementById('loadingLayout').style.display = 'none';",500);
+	} else {
+		document.styleSheets[1].disabled = true;
+		switchLayout();
+		document.getElementById('loadingLayout').style.display = 'none'
+	}
+}
+//-->
+</script>
+<roundcube:endif />
+<roundcube:if condition="config:preview_pane_vertical == true" />
+<script type="text/javascript">
+<!--//
+configSet=true;
+window.onload = function () {
+	var cookie = readCookie("layout");
+	if (cookie && cookie == 'vertical') { 
+		document.styleSheets[1].disabled = false;
+		switchLayout();
+		document.getElementById('loadingLayout').style.display = 'none'
+	} else if (cookie && cookie == 'horizontal') {
+		document.styleSheets[1].disabled = true;
+		switchLayout();
+		setTimeout("switchLayout();switchLayout();document.getElementById('loadingLayout').style.display = 'none';",500);
+	} else {
+		document.styleSheets[1].disabled = false;
+		switchLayout();
+		document.getElementById('loadingLayout').style.display = 'none'
+	}
+}
+//-->
+</script>
+<roundcube:endif />
+<script type="text/javascript">
+<!--//
+/* Check for Config Requirement */
+if (!configSet){ 
+	window.onload = function () {
+		if (!configSet) alert('Administrator: You have not set the new config requirement');
+	}
+}
+
+/* Which layout */
+function whichLayout() {
+	return (document.styleSheets[1].disabled?'vertical':'horizontal');
+}
+/* Set cookie */
+window.onunload = function(e) {
+	createCookie('layout',whichLayout(),365*100);
+}
+
+//-->
+</script>
+<div id="mailpreviewframe">
+<roundcube:object name="messagecontentframe" id="messagecontframe" width="100%" height="100%" frameborder="0" src="/preview.html" />
+</div>
+
+
+
+
+
+
+
+<div id="listcontrols">
+<div id="listcontrols-lable">
+<roundcube:label name="select" />:&nbsp;
+<roundcube:button command="select-all" label="all" classAct="active" />&nbsp;
+<roundcube:button command="select-all" prop="unread" label="unread" classAct="active" />&nbsp;
+<roundcube:button command="select-none" label="none" classAct="active" /> &nbsp;&nbsp;&nbsp;Switch Layout: <a href="#" title="Click to switch view" class="active" id="switchLayout" onclick="switchLayout()">Horizontal/Vertical</a>
+&nbsp;&nbsp;&nbsp;
+<roundcube:if condition="env:quota" />
+<roundcube:label name="quota" />: <roundcube:object name="quotaDisplay" display="image" width="120" id="quotadisplay" />
+<roundcube:endif />
+</div>
+</div>
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
